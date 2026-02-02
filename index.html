@@ -9,22 +9,15 @@
   <body>
     <main class="card">
       <h1>BMI Calculator</h1>
-      <p>Enter your height and weight to calculate your BMI.</p>
+      <p>
+        Enter your age and weight to calculate your BMI (height is set to
+        170&nbsp;cm).
+      </p>
 
-      <label>
-        Height (cm)
-        <input id="height" type="number" placeholder="e.g. 170" min="1" />
-      </label>
+      <button id="loginBtn" type="button">Login with Google</button>
+      <div id="authStatus" class="status" aria-live="polite"></div>
 
-      <label>
-        Name
-        <input id="name" type="text" placeholder="e.g. Alex" />
-      </label>
-
-      <label>
-        City
-        <input id="city" type="text" placeholder="e.g. Mumbai" />
-      </label>
+      <input id="height" type="number" value="170" hidden />
 
       <label>
         Age (years)
@@ -39,8 +32,10 @@
       <button id="calcBtn" type="button">Calculate BMI</button>
 
       <div id="result" class="result" aria-live="polite"></div>
+      <div id="saveStatus" class="status" aria-live="polite"></div>
     </main>
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
